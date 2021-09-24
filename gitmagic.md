@@ -38,21 +38,14 @@ Below are the steps for setting up your own local working directory, and then co
 
 ### Step 2. Daily workflow
 
-command
-explanation
-git status
-A quick check of current status of your local repo
-git branch
-Determine which branch you are in, locally
-git switch master
-git pull origin
-Before synching with upstream’s /main, switch to your local /main branch and synch with it
-
-This synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge
-IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc
-Switch to your local branch, and run
-
-git pull --rebase origin master
+| Command      | Explanation |
+| ----------- | ----------- |
+| git status      | A quick check of current status of your local repo       |
+| git branch   | Determine which branch you are in, locally        |
+| git switch master |    |
+| git switch master |  |
+| git pull origin | Before synching with upstream’s /main, switch to your local /main branch and synch with it. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
+| IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin master` |
 
 This will apply any changes that have been made (to the upstream repo) on top of origin/master in your local branch.
 Decide which branch to work in:
