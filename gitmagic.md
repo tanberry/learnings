@@ -1,8 +1,8 @@
- How internal team members can contribute to our  open source docs
+# How internal team members can contribute to our  open source docs
 
+## Contents
 
-How internal team members can contribute to our  open source docs
-Contributing
+[Contributing](#contributing)
 Step 1. Setting up your local repo
 Step 2. Daily workflow
 Step 3. Open a Pull Request
@@ -11,32 +11,35 @@ Random notes of knowledge from Chris Nixon
 Cherry Picking
 Contributing to an existing PR branch
 
-Contributing
+## Contributing
 
-Anyone in LogDNA, or out in our community, can help us improve our technical documentation that is in GitHub public repos. 
+Anyone in our company, or out in our community, can help us improve our technical documentation that is in GitHub public repos. 
 
 For suggestions, questions, etc you can open an Issue. 
 For specific fixes with exact wording included, open a PR (pull request).
 
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream, original repository.
-Step 1. Setting up your local repo
-Fork repo 
-Clone repo
-In your terminal, create a new directory for the local repo
+
+### Step 1. Setting up your local repo
+1. Fork repo 
+2. Clone repo
+ 3. In your terminal, create a new directory for the local repo
 mkdir <name-of-dir>
-Initialize git in that directory
-git init
-Go to the upstream repo, and copy the URL for the repo, using the Clone button.
+ 4. Initialize git in that directory
+ 5. git init
+6. Go to the upstream repo, and copy the URL for the repo, using the Clone button.
 
-Then run:
+7. Then run:
+```bash
 git clone https://github.com/<repo name>
-Set remote as origin:
-git remote add origin https://github.com/<repo name>
+ ```
+8. Set remote as origin:
+`git remote add origin https://github.com/<repo name>`
 
 
 
 
-Step 2. Daily workflow
+### Step 2. Daily workflow
 
 command
 explanation
