@@ -3,9 +3,13 @@
 ## Contents
 
 [Contributing](#contributing)
+
 [Troubleshooting](#troubleshooting)
+
 [Random notes of knowledge from Chris Nixon](random-notes-of-knowledge)
+
 [Cherry Picking](#cherry-picking)
+
 [Contributing to an existing PR branch](#contributing-to-an-existing-branch)
 
 ## Contributing
@@ -20,10 +24,9 @@ Below are the steps for setting up your own local working directory, and then co
 ### Step 1. Setting up your local repo
 1. Fork repo 
 2. Clone repo
-   * In your terminal, create a new directory for the local repo
-mkdir <name-of-dir>
-   * Initialize git in that directory
-   * git init
+   1. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`
+   2. Initialize git in that directory using `git init`
+
 6. Go to the upstream repo, and copy the URL for the repo, using the Clone button.
 
 7. Then run: `git clone https://github.com/<repo name>`
