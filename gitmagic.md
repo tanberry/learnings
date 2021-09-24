@@ -3,13 +3,10 @@
 ## Contents
 
 [Contributing](#contributing)
-Step 1. Setting up your local repo
-Step 2. Daily workflow
-Step 3. Open a Pull Request
-Troubleshooting
-Random notes of knowledge from Chris Nixon
-Cherry Picking
-Contributing to an existing PR branch
+[Troubleshooting](#troubleshooting)
+[Random notes of knowledge from Chris Nixon](random-notes-of-knowledge)
+[Cherry Picking](#cherry-picking)
+[Contributing to an existing PR branch](#contributing-to-an-existing-branch)
 
 ## Contributing
 
@@ -23,18 +20,15 @@ Below are the steps for setting up your own local working directory, and then co
 ### Step 1. Setting up your local repo
 1. Fork repo 
 2. Clone repo
- 3. In your terminal, create a new directory for the local repo
+   * In your terminal, create a new directory for the local repo
 mkdir <name-of-dir>
- 4. Initialize git in that directory
- 5. git init
+   * Initialize git in that directory
+   * git init
 6. Go to the upstream repo, and copy the URL for the repo, using the Clone button.
 
-7. Then run:
-```bash
-git clone https://github.com/<repo name>
- ```
-8. Set remote as origin:
-`git remote add origin https://github.com/<repo name>`
+7. Then run: `git clone https://github.com/<repo name>`
+
+8. Set remote as origin: `git remote add origin https://github.com/<repo name>`
 
 
 
