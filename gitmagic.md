@@ -50,9 +50,7 @@ Below are the steps for setting up your own local working directory, and then co
 | `git pull origin <branch name>` |   |
 | `git branch` | To determine which branch you are currently in. Typically you want to work on a separate task-specific branch, not `/main`. |
 | Do your coding, editing, writing work on the files usingvim or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
-| `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:
--- You can check which remote branch your local branch is tracking by running git status -sb. The top line will be the remote branch that git push defaults to. Or you can be explicit and do git push origin <branch name>
--- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
+| `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running git status -sb. The top line will be the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
 ## Step 3. Open a Pull Request
 Go to the GitHub repository.
