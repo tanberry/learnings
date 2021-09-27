@@ -33,9 +33,6 @@ Below are the steps for setting up your own local working directory, and then co
 
 8. Set remote as origin: `git remote add origin https://github.com/<repo name>`
 
-
-
-
 ### Step 2. Daily workflow
 
 | Command      | Explanation |
@@ -50,69 +47,57 @@ Below are the steps for setting up your own local working directory, and then co
 | `git pull origin <branch name>` |   |
 | `git branch` | To determine which branch you are currently in. Typically you want to work on a separate task-specific branch, not `/main`. |
 | Do your coding, editing, writing work on the files usingvim or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
-| `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running git status -sb. The top line will be the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
+| `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
-## Step 3. Open a Pull Request
-Go to the GitHub repository.
-Go to the Pull Request “tab”.
-Click the “Compare & pull request”button.
+### Step 3. Open a Pull Request
 
+1. Go to the GitHub repository.
+2. Go to the Pull Request tab.
+3. Click the **Compare & pull request**.
+4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
+5. Click  **Create pull request**.
 
-
-
-
-On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
-Click the Create pull request button.
-
-
-
-Troubleshooting
+## Troubleshooting
 
 Issue: If you get an error about credentials, look at the error message to see if it is trying to use https. If so, that won’t work cause we need to use SSH (to get around our SSO).
 Solution: run `git remote set-url origin ssh://git@github.com:/logdna/logdna-agent-v2.git`
 
-Random notes of knowledge from Chris Nixon
-git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
+## Random notes of knowledge from Chris Nixon
+* git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
  
-if you have already run `git add` but not yet `git commit` you can un-add. To “un-add” everything then you don’t need to provide a file name, if you only want to un-add a file you can give it the file name. For example, `git reset README.md`. And if you only want to un-add a “hunk” then you can do git reset --patch.
+* if you have already run `git add` but not yet `git commit` you can un-add. To “un-add” everything then you don’t need to provide a file name, if you only want to un-add a file you can give it the file name. For example, `git reset README.md`. And if you only want to un-add a “hunk” then you can do git reset --patch. After running the `git reset <filename` command, the changed file will be unadded but it will still show as modified if you run `git status`. To fix that, run `git restore --patch`.
  
-After running the `git reset <filename` command, the changed file will be unadded but it will still show as modified if you run `git status`. To fix that, run `git restore --patch`.
+* You can check which remote branch your local branch is tracking by running git status -sb. The top line will be the remote branch that git push defaults to. Else, yes, you can be explicit and do git push origin v2.2-docs-2 
  
-You can check which remote branch your local branch is tracking by running git status -sb. The top line will be the remote branch that git push defaults to. Else, yes, you can be explicit and do git push origin v2.2-docs-2 
+* if you do git push -u  it’ll automatically set the remote tracking branch to the same branch name as your local branch
  
-ADDING TO AN EXISTING PR: If you clone the logdna/logdna-agent-v2 repo and check out my branch you can add changes to my PR. You just commit on top of the branch and push. Since the PR is just a diff of /master and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
+* Cherry Picking
+`git fetch`
+`git checkout 3.0`
+`git merge --ff origin/master`
+`git checkout 2.2`
+`git cherry-pick origin/master`
  
-if you do git push -u  it’ll automatically set the remote tracking branch to the same branch name as your local branch
- 
-Cherry Picking
-git fetch
-git checkout 3.0
-git merge --ff origin/master
-git checkout 2.2
-git cherry-pick origin/master
- 
-Chris: “You’d need to checkout 3.2, then checkout -b a new, differently named docs branch, then run “git cherry-pick <name of your original docs branch>”
-3:11
-That would grab the commit with your changes without grabbing all of the changes from master.”
- 
-Contributing to an existing PR branch
+Chris re cherry-picking: “You’d need to checkout 3.2, then checkout -b a new, differently named docs branch, then run “git cherry-pick <name of your original docs branch>”. That would grab the commit with your changes without grabbing all of the changes from master.”
+
+* ADDING TO AN EXISTING PR: If you clone the logdna/logdna-agent-v2 repo and check out another person's branch (i.e. (switch to that branch) you can add changes to their PR. You just commit on top of the branch and push. Since the PR is just a diff of /master and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
  
 If you want to make changes to the content in an open PR, follow these steps:
  
-Synch with upstream:
-On the /master, branch run git pull origin
-Check out the PR’s branch: git switch <branch name>
-Make your changes, save them.
-Still in the PR’s branch, add your changes: git add <dir/file name>
-Commit your changes: git commit -m <”message about change”>
-Push your changes: git push origin <branch name>
+1. Synch with upstream:
+2. On the /master, branch run git pull origin
+3. Check out the PR’s branch: git switch <branch name>
+4. Make your changes, save them.
+5. Still in the PR’s branch, add your changes: git add <dir/file name>
+6. Commit your changes: git commit -m <”message about change”>
+7. Push your changes: git push origin <branch name>
  
-DS_Store file mess:
+* DS_Store file mess:
 
 Had an error where it complained about .DS_Store. Chris said to run:
 
-git reset
-git add docs/
+`git reset`
+`git add docs/`
  
 This apparently “untracked the DS_Store file.
 
