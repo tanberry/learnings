@@ -27,9 +27,11 @@ Below are the steps for setting up your own local working directory, and then co
    1. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`
    2. Initialize git in that directory using `git init`
 
-6. Go to the upstream repo, and copy the URL for the repo, using the Clone button.
+6. Go to the upstream repo, click `< >Code` and then select **Clone** from the drop-down menu.
 
-7. Then run: `git clone https://github.com/<repo name>`
+8. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
+
+7. Then run: `git clone <the URL you copied>`
 
 8. Set remote as origin: `git remote add origin https://github.com/<repo name>`
 
