@@ -41,10 +41,10 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | ----------- | ----------- |
 | `git status`      | A quick check of current status of your local repo       |
 | `git branch`   | Determine which branch you are in, locally        |
-| `git switch master` |    |
-| `git switch master` |  |
+| `git switch main` |    |
+| `git switch main` |  |
 | `git pull origin` | Before synching with upstream’s /main, switch to your local /main branch and synch with it. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
-| IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin master`. This will apply any changes that have been made (to the upstream repo) on top of origin/master in your local branch. |
+| IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin main`. This will apply any changes that have been made (to the upstream repo) on top of origin/main in your local branch. |
 | Decide which branch to work in: To create a new branch use `git checkout -b <name of new branch>`. To switch to existing branch use `git switch <name of branch>` OR `git checkout <name of branch>` | Typically you should name the working branch after the work ticket number or the task, to identify this particular chunk of work.|
 | `git pull origin <branch name>` |   |
 | `git branch` | To determine which branch you are currently in. Typically you want to work on a separate task-specific branch, not `/main`. |
@@ -80,18 +80,18 @@ Solution: run `git remote set-url origin ssh://git@github.com:/<company>/<repo>.
 * Cherry Picking
 `git fetch`
 `git checkout 3.0`
-`git merge --ff origin/master`
+`git merge --ff origin/main`
 `git checkout 2.2`
-`git cherry-pick origin/master`
+`git cherry-pick origin/main`
  
-Chris re cherry-picking: “You’d need to checkout 3.2, then checkout -b a new, differently named docs branch, then run “git cherry-pick <name of your original docs branch>”. That would grab the commit with your changes without grabbing all of the changes from master.”
+Chris re cherry-picking: “You’d need to checkout 3.2, then checkout -b a new, differently named docs branch, then run “git cherry-pick <name of your original docs branch>”. That would grab the commit with your changes without grabbing all of the changes from main.”
 
-* ADDING TO AN EXISTING PR: If you clone the logdna/logdna-agent-v2 repo and check out another person's branch (i.e. (switch to that branch) you can add changes to their PR. You just commit on top of the branch and push. Since the PR is just a diff of /master and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
+* ADDING TO AN EXISTING PR: If you clone the logdna/logdna-agent-v2 repo and check out another person's branch (i.e. (switch to that branch) you can add changes to their PR. You just commit on top of the branch and push. Since the PR is just a diff of /main and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
  
 If you want to make changes to the content in an open PR, follow these steps:
  
 1. Synch with upstream:
-2. On the /master, branch run git pull origin
+2. On the /main, branch run git pull origin
 3. Check out the PR’s branch: git switch <branch name>
 4. Make your changes, save them.
 5. Still in the PR’s branch, add your changes: git add <dir/file name>
