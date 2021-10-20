@@ -40,20 +40,20 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | Command      | Explanation |
 | ----------- | ----------- |
 | `git status`      | A quick check of current status of your local repo       |
+| `git fetch upstream` | synch with the upstream repo every day BEFORE you begin your work. It's very likely that colleagues have added news docs, etc, so you want to start your workday by pulling in those changes into your remote. |
 | `git branch`   | Determine which branch you are in, locally        |
-| `git switch main` |    |
-| `git switch main` |  |
-| `git pull origin` | Before synching with upstream’s /main, switch to your local /main branch and synch with it. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
+| `git switch main` |  move to the local main branch before   |
+| `git pull origin` | Before synching with origin’s /main, switch to your local /main branch and synch with it. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
 | IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin main`. This will apply any changes that have been made (to the upstream repo) on top of origin/main in your local branch. |
 | Decide which branch to work in: To create a new branch use `git checkout -b <name of new branch>`. To switch to existing branch use `git switch <name of branch>` OR `git checkout <name of branch>` | Typically you should name the working branch after the work ticket number or the task, to identify this particular chunk of work.|
 | `git pull origin <branch name>` |   |
 | `git branch` | To determine which branch you are currently in. Typically you want to work on a separate task-specific branch, not `/main`. |
-| Do your coding, editing, writing work on the files usingvim or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
+| Do your coding, editing, writing work on the files using vim, Atom, VSCode, or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
 | `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
 ### Step 3. Open a Pull Request
 
-1. Go to the GitHub repository.
+1. Go to the GitHub repository for the upstream repo.
 2. Go to the Pull Request tab.
 3. Click the **Compare & pull request**.
 4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
@@ -63,10 +63,14 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
    
-Issue: if prompted for your paassowrd, you will need to use a "personal token". For more info, refer to this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+Issue: if prompted for your password, you will need to use a "personal token" (post August 2021). For more info, refer to this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
    
 Issue: If you get an error about credentials, look at the error message to see if it is trying to use https. If so, try using SSH (to get around our SSO).
 Solution: run `git remote set-url origin ssh://git@github.com:/<company>/<repo>.git`
+   
+re-defining your origin or upstream repo:
+* `git remote set-url origin <https:\\your repo url>`
+* `git remote set-url upstream <https:\\your repo url>`
 
 ## Random notes of knowledge from Chris Nixon
 * git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
