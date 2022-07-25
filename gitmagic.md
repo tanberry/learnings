@@ -22,7 +22,7 @@ For specific fixes with exact wording included, open a PR (pull request).
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream, original repository.
 
 ### Step 1. Setting up your local repo
-1. Fork the upstream repo 
+1. Fork the upstream repo (IF you want to, this is optional and only needed if you plan to work in the "triangular" workflow.
 2. Clone the forked repo, to create a local working copy, using these commands:
    1. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`
    2. Initialize git in that directory using `git init`
@@ -30,8 +30,9 @@ Below are the steps for setting up your own local working directory, and then co
    4. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
    5. Then in your terminal run: `git clone <the URL you copied>`
 
-8. Set your remote repo (the forked one) as origin: `git remote add origin https://github.com/<repo name>`
-9. Set the upstream repo to point to the repo that you forked: `git remote add upstream git://github.com/user/repo.git`
+8. Define upstream and origin repos (Optional, only if you forked upstream)
+    a. Set your remote repo (the forked one) as origin: `git remote add origin https://github.com/<repo name>`
+    b. Set the upstream repo to point to the repo that you forked: `git remote add upstream git://github.com/user/repo.git`
 
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
@@ -40,7 +41,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | Command      | Explanation |
 | ----------- | ----------- |
 | `git status`      | A quick check of current status of your local repo       |
-| `git fetch upstream` | synch with the upstream repo every day BEFORE you begin your work. It's very likely that colleagues have added news docs, etc, so you want to start your workday by pulling in those changes into your remote. |
+| (Optional, only if you forked!) `git fetch upstream` | synch with the upstream repo every day BEFORE you begin your work. It's very likely that colleagues have added news docs, etc, so you want to start your workday by pulling in those changes into your remote. |
 | `git branch`   | Determine which branch you are in, locally        |
 | `git switch main` |  move to the local main branch before   |
 | `git pull origin` | Before synching with origin’s /main, switch to your local /main branch and synch with it. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
