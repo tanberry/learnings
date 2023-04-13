@@ -116,7 +116,7 @@ This apparently “untracked the DS_Store file.
 
  ## How to manage upstream commits that are ahead of your local repo
    
- If you create a PR, and someone pushes tcommits to it upstream, you won;t be able to do a `git pull` to synch. You will need to do a `git rebase` command.
+ If you create a PR, and someone pushes commits to it upstream, you won't be able to do a `git pull` to synch. You will need to do a `git rebase` command.
    
   `git rebase origin <name of upstream branch>`
    
