@@ -104,6 +104,8 @@ If you want to make changes to the content in an open PR, follow these steps:
 5. Still in the PR’s branch, add your changes: git add <dir/file name>
 6. Commit your changes: git commit -m <”message about change”>
 7. Push your changes: git push origin <branch name>
+
+NOTE: recently, the final step above did not work for me, but rather created a brand new separate PR... instead of pushing my commits to the existing PR. The command that DID work is `git push <remote> <local_branch>:<remote_name>`
  
 * DS_Store file mess:
 
