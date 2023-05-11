@@ -4,6 +4,8 @@
 
 [Contributing](#contributing)
 
+[Using aliases](#using-aliases)
+
 [Troubleshooting](#troubleshooting)
 
 [Random notes of knowledge from Chris Nixon](random-notes-of-knowledge)
