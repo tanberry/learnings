@@ -68,9 +68,9 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 	
 (Thanks to Ken @ authentik for this!)
 	
-```
 #In your ~/.gitconfig file:
 	
+```	
 [alias]
 	
 unstage = reset -q HEAD --
