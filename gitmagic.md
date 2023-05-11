@@ -62,6 +62,14 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
 5. Click  **Create pull request**.
 
+## Using aliases
+   (Thanks to Ken @ authentik for this!)
+   # In your ~/.gitconfig file:
+   [alias]
+    unstage = reset -q HEAD --
+    nevermind = !git reset --hard HEAD && git clean -d -f
+	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads	
+   
 ## Troubleshooting
 
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
