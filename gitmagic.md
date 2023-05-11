@@ -64,7 +64,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 
 ## Using aliases
    (Thanks to Ken @ authentik for this!)
-   # In your ~/.gitconfig file:
+   #In your ~/.gitconfig file:
    [alias]
     unstage = reset -q HEAD --
     nevermind = !git reset --hard HEAD && git clean -d -f
