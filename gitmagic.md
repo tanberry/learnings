@@ -65,12 +65,16 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 5. Click  **Create pull request**.
 
 ## Using aliases
+	
    (Thanks to Ken @ authentik for this!)
+	
    #In your ~/.gitconfig file:
    [alias]
     unstage = reset -q HEAD --
     nevermind = !git reset --hard HEAD && git clean -d -f
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads	
+	
+And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/soxincfg/-/blob/main/modules/programs/git.nix#L21
    
 ## Troubleshooting
 
