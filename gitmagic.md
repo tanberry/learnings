@@ -128,13 +128,11 @@ If you want to make changes to the content in an open PR, follow these steps:
 NOTE: recently, the final step above did not work for me, but rather created a brand new separate PR... instead of pushing my commits to the existing PR. The command that DID work is `git push <remote> <local_branch>:<remote_name>`
  
 * DS_Store file mess:
+On macOS systems, you often get extraneous files called .DS_Store. To unstage/untrack these files, run:
 
-Had an error where it complained about .DS_Store. Chris said to run:
-
-`git reset`
-`git add docs/`
+`git reset --hard HEAD && git clean -d -f`
  
-This apparently “untracked the DS_Store file.
+You should also add the file name to your gitignore file.
 
  ## How to manage upstream commits that are ahead of your local repo
    
