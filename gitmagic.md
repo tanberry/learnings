@@ -86,14 +86,26 @@ And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/s
 
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
    
+## Personal tokens
+	
 Issue: if prompted for your password, you will need to use a "personal token" (post August 2021). For more info, refer to this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
    
+### Credentials
+	
 Issue: If you get an error about credentials, look at the error message to see if it is trying to use https. If so, try using SSH (to get around our SSO).
 Solution: run `git remote set-url origin ssh://git@github.com:/<company>/<repo>.git`
    
-re-defining your origin or upstream repo:
+### Re-defining your origin or upstream repo:
 * `git remote set-url origin <https:\\your repo url>`
 * `git remote set-url upstream <https:\\your repo url>`
+	
+### DS_Store file mess:
+	
+On macOS systems, you often get extraneous files called .DS_Store. To unstage/untrack these files, run:
+
+`git reset --hard HEAD && git clean -d -f`
+ 
+You should also add the file name to your gitignore file.
 
 ## Random notes of knowledge from Chris Nixon
 * git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
@@ -126,13 +138,6 @@ If you want to make changes to the content in an open PR, follow these steps:
 7. Push your changes: git push origin <branch name>
 
 NOTE: recently, the final step above did not work for me, but rather created a brand new separate PR... instead of pushing my commits to the existing PR. The command that DID work is `git push <remote> <local_branch>:<remote_name>`
- 
-* DS_Store file mess:
-On macOS systems, you often get extraneous files called .DS_Store. To unstage/untrack these files, run:
-
-`git reset --hard HEAD && git clean -d -f`
- 
-You should also add the file name to your gitignore file.
 
  ## How to manage upstream commits that are ahead of your local repo
    
