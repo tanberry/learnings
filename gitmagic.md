@@ -73,7 +73,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 ```	
 [alias]
 	
-unstage = reset -q HEAD --
+unstage = git reset -q HEAD --
 	
 nevermind = !git reset --hard HEAD && git clean -d -f
 	
