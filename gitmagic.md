@@ -82,11 +82,19 @@ wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(author
 	
 And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/soxincfg/-/blob/main/modules/programs/git.nix#L21
    
-## Troubleshooting
-
+## Cheatsheets
+	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
+	
+## Troubleshooting
+	
+### Removing files from a PR
+If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
+	
+Run `rm -r <dir-you-want-to-delete> in the root source folder
+Then git `rm -r <dir-you-want-to-delete>` and `git commit --amend` and finally `git push --force --set-upstream origin <name-of-PR-branch-on-remote>
    
-## Personal tokens
+### Personal tokens
 	
 Issue: if prompted for your password, you will need to use a "personal token" (post August 2021). For more info, refer to this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
    
