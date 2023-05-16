@@ -6,6 +6,8 @@
 
 [Using aliases](#using-aliases)
 
+[Cheatsheets](#cheatsheets)
+
 [Troubleshooting](#troubleshooting)
 
 [Random notes of knowledge from Chris Nixon](random-notes-of-knowledge)
