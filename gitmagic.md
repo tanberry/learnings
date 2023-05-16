@@ -22,18 +22,18 @@ Below are the steps for setting up your own local working directory, and then co
 
 ### Step 1. Setting up your local repo
 1. Fork the upstream repo (IF you want to, this is optional and only needed if you plan to work in the "triangular" workflow. If not needed or able, just skip to Step 2 and clone the repo.)
-2. Clone the forked repo (in order to create a local working copy) using these commands:
+2. Clone the forked repo (OR if you did not fork, then clone the official upstream repo) in order to create a local working copy, using these commands:
    1. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`
    2. Initialize git in that directory using `git init`
    3. Go to the upstream repo, click `< >Code` and then select **Clone** from the drop-down menu.
    4. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
    5. Then in your terminal (in the directory you just created), run: `git clone <the URL you copied>`
 
-8. Define upstream and origin repos (Optional, only if you forked upstream)
+8. Define upstream and origin repos 
 
-    a. Set your remote repo (the forked one) as origin: `git remote add origin https://github.com/<repo name>`
+    a. Set your remote repo (the forked one or the official) as origin: `git remote add origin https://github.com/<repo name>`
     
-    b. Set the upstream repo to point to the repo that you forked: `git remote add upstream git://github.com/user/repo.git`
+    b. Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://github.com/user/repo.git`
 
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
