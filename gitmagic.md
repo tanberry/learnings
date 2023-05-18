@@ -86,7 +86,7 @@ Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-she
 	
 ### Rebasing a remote branch/PR
 	
-For when you created a PR, then others make commits to it so that your local branch is no longer in synch with the remote branch of the PR. Diane suggests this process: https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
+For when you created a PR, then others make commits to it so that your local branch is no longer in synch with the remote branch of the PR. If a simple `git pull origin <remote-branch-name>` does not work, then Diane suggests this process: https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
 	
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
