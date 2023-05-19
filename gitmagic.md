@@ -4,17 +4,17 @@
 
 [Contributing](#contributing)
 
-[Using aliases](#using-aliases)
-
 [Cheatsheets](#cheatsheets)
 
 [Troubleshooting](#troubleshooting)
 
-[Random notes of knowledge from Chris Nixon](random-notes-of-knowledge)
+[Random notes of knowledge from Chris Nixon](#random-notes-of-knowledge)
 
 [Cherry Picking](#cherry-picking)
 
 [Contributing to an existing PR branch](#contributing-to-an-existing-branch)
+
+[Using aliases](#using-aliases)
 
 ## Contributing
 
@@ -60,29 +60,14 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
 5. Click  **Create pull request**.
 
-## Using aliases
-	
-(Thanks to Ken @ authentik for this!)
-	
-#In your ~/.gitconfig file:
-	
-```	
-[alias]
-	
-unstage = git reset -q HEAD --
-	
-nevermind = !git reset --hard HEAD && git clean -d -f
-	
-wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads	
-```
-	
-And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/soxincfg/-/blob/main/modules/programs/git.nix#L21
-   
 ## Cheatsheets
 	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
 	
 ## Troubleshooting
+	
+### Resetrting your local `/main` to be exactly the same as upstream `/main` 
+To get rid of unwanted changes and staged commits, run `git reset --hard origin/main`. To further cleanup, as in remove _DS_Store files, run `git clean -d -f`.
 	
 ### Rebasing a remote branch/PR
 	
@@ -113,7 +98,7 @@ On macOS systems, you often get extraneous files called .DS_Store. To unstage/un
 
 `git reset --hard HEAD && git clean -d -f`
  
-You should also add the file name to your gitignore file.
+Be aware that this will also unstage any pending files that were committed...  it will reset your local branch to be just like upstream branch. You should also add the file name to your gitignore file.
 
 ## Random notes of knowledge from Chris Nixon
 * git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
@@ -155,6 +140,25 @@ NOTE: recently, the final step above did not work for me, but rather created a b
    
    
   For more info about using `rebase` see [How to Rebase a Pull Request](https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request).
+	
+## Using aliases
+	
+(Thanks to Ken @ authentik for this!)
+	
+#In your ~/.gitconfig file:
+	
+```	
+[alias]
+	
+unstage = git reset -q HEAD --
+	
+nevermind = !git reset --hard HEAD && git clean -d -f
+	
+wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads	
+```
+	
+And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/soxincfg/-/blob/main/modules/programs/git.nix#L21
+   
  
  
 
