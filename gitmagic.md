@@ -66,7 +66,7 @@ Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-she
 	
 ## Troubleshooting
 	
-### Resetrting your local `/main` to be exactly the same as upstream `/main` 
+### Restarting your local `/main` to be exactly the same as upstream `/main` 
 To get rid of unwanted changes and staged commits, run `git reset --hard origin/main`. To further cleanup, as in remove _DS_Store files, run `git clean -d -f`.
 	
 ### Rebasing a remote branch/PR
