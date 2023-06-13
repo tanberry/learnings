@@ -60,9 +60,15 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
 5. Click  **Create pull request**.
 
-## Cheatsheets
+## Cheatsheets & Pro Tips
 	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
+	
+### Concatenating Git commands:
+	
+From Jens: If you want to pull down a commit that was made in your PR upstream, and then run `make website` (for the linter), you can run `git pull; make website` and then commit the changes. (Assuming you’ve got the PR branch checked out, you can just run `git pull` and not specify theupstream branch.)
+
+Use `;` to run commands one after another, `&&` to only run the next command if the first one is successful, and use `||` to only run the next command if the first one fails.
 	
 ## Troubleshooting
 	
