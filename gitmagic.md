@@ -82,8 +82,8 @@ For when you created a PR, then others make commits to it so that your local bra
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
 	
-Run `rm -r <dir-you-want-to-delete> in the root source folder
-Then git `rm -r <dir-you-want-to-delete>` and `git commit --amend` and finally `git push --force --set-upstream origin <name-of-PR-branch-on-remote>
+Run `rm -r <dir-you-want-to-delete>` in the root source folder.
+Then run `git `rm -r <dir-you-want-to-delete>` and `git commit --amend` and finally `git push --force --set-upstream origin <name-of-PR-branch-on-remote>`.
    
 ### Personal tokens
 	
