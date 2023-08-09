@@ -94,6 +94,11 @@ If you accidentally included files (like random `.py` files, etc) that you do no
 	
 Run `rm -r <dir-you-want-to-delete>` in the root source folder.
 Then run `git `rm -r <dir-you-want-to-delete>` and `git commit --amend` and finally `git push --force --set-upstream origin <name-of-PR-branch-on-remote>`.
+
+### How to remove local untracked files from the current Git branch
+* To remove directories, run git clean -f -d or git clean -fd.
+* To remove ignored files, run git clean -f -X or git clean -fX.
+* To remove ignored and non-ignored files, run git clean -f -x or git clean -fx.
    
 ### Personal tokens
 	
