@@ -4,7 +4,7 @@
 
 [Contributing](#contributing)
 
-[Cheatsheets](#cheatsheets)
+[Cheatsheets](#cheatsheets-&-pro-tips)
 
 [Troubleshooting](#troubleshooting)
 
