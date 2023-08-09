@@ -69,6 +69,10 @@ Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-she
 From Jens: If you want to pull down a commit that was made in your PR upstream, and then run `make website` (for the linter), you can run `git pull; make website` and then commit the changes. (Assuming you’ve got the PR branch checked out, you can just run `git pull` and not specify theupstream branch.)
 
 Use `;` to run commands one after another, `&&` to only run the next command if the first one is successful, and use `||` to only run the next command if the first one fails.
+
+### Delete local branches
+
+`git branch -d <local-branch>`
 	
 ## Troubleshooting
 	
