@@ -114,7 +114,7 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 
 `git pull --rebase origin [branch]`
 
-**--> Winner winner checken dinner!** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
+**Winner winner chicken dinner! -->** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
 	
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
