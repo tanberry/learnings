@@ -96,6 +96,8 @@ For when you created a PR, then others make commits to it so that your local bra
 However, I used this command (from [here](https://www.freecodecamp.org/news/error-failed-to-push-some-refs-to-how-to-fix-in-git/)) and it worked prefectly:
 
 `git pull --rebase origin [branch]`
+
+Jens recomended `git fetch --all` (which downloads all the upstream chnages) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
 	
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
