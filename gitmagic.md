@@ -37,7 +37,24 @@ Below are the steps for setting up your own local working directory, and then co
 
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
-### Step 2. Daily workflow
+### Step 2. Use one of the following processes, depending on if you forked the upstream repo or directly coned it (usually the case if you are an employee and have write access).
+
+#### Daily workflow on a **forked repo**
+
+| Command      | Explanation |
+| ----------- | ----------- |
+| `git status`      | A quick check of current status of your local repo       |
+| `git branch`   | Determine which branch you are in, locally.         |
+| `git switch main` |  move to the local main branch before   |
+| `git pull origin main` | synch with the upstream repo every day BEFORE you begin your work. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
+| IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin main`. This will apply any changes that have been made (to the upstream repo) on top of origin/main in your local branch. |
+| Decide which branch to work in: To create a new branch use `git checkout -b <name of new branch>`. To switch to existing branch use `git switch <name of branch>` OR `git checkout <name of branch>` | Typically you should name the working branch after the work ticket number or the task, to identify this particular chunk of work.|
+| `git pull origin <branch name>` |   |
+| `git branch` | To determine which branch you are currently in.  Typically you want to work on a separate task-specific branch, not `/main`.|
+| Do your coding, editing, writing work on the files using vim, Atom, VSCode, or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
+| `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
+
+#### Daily workflow on a **cloned repo**
 
 | Command      | Explanation |
 | ----------- | ----------- |
@@ -97,7 +114,7 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 
 `git pull --rebase origin [branch]`
 
-Jens recomended `git fetch --all` (which downloads all the upstream chnages) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
+**--> Winner winner checken dinner!** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
 	
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
