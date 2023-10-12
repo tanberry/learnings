@@ -99,7 +99,7 @@ To get rid of unwanted changes and staged commits, run `git reset --hard origin/
 ### Synching a local branch with the upstream `/main` 
 If you created a local working branch, say `enterprise-docs` and you are working on it for weeks before you create the PR, you will want to update it in order to pull in all of the changes that have been made to the upstream `/main` branch. Otherwise, you wil have a ton of merge conflicts later when you create your PR and then try to merge it.
 
-On your local working branch, run `git status` to mkae sure all of your local changes have been staged. If needed, run `git add` and `git commit` to stage the changes.
+On your local working branch, run `git status` to make sure all of your local changes have been staged. If needed, run `git add` and `git commit` to stage the changes.
 
 Now run `git fetch origin main`.
 
