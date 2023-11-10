@@ -115,6 +115,8 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 `git pull --rebase origin [branch]`
 
 **Winner winner chicken dinner! -->** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
+
+From twitter, the suggestion to use `git restore —staged`. Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched. ([source](https://www.git-tower.com/learn/git/commands/git-restore#:~:text=%2D%2Dstaged,restore%20their%20last%20committed%20state.))
 	
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
