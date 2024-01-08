@@ -20,7 +20,7 @@
 
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream (official) repository.
 
-::: info
+:::info
 Think of the fork workflow as a triangle: you fork and clone the official repo, create a local copy, push that local copy to your fork, and then create a PR to pull in your updates TO the official repo FROM your fork.
 :::
 
@@ -82,9 +82,9 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
 2. Go to the **Pull Request** tab. (There you should see a message about your recent push to the repo.)
 3. Click the **Compare & pull request**.
 4. On the PR page:
-     a. provide a commit message (or keep the one you added when committing).
-     b. change the commit title to match the directory destination for your changes. (Ex. `website/docs: commit message`.)
-     b. select at least two reviewers.
+   a. provide a commit message (or keep the one you added when committing).
+   b. change the commit title to match the directory destination for your changes. (Ex. `website/docs: commit message`.)
+   c. select at least two reviewers.
 6. Click  **Create pull request**.
 
 ## Cheatsheets
