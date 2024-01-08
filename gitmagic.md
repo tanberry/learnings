@@ -21,34 +21,37 @@
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream (official) repository.
 
 ::: info
-Think of the fork workflow as a triangul: you fork and clone the official repo, create a local copy, push that local copy to your fork, and then create a PR to pull in your updates TO the official repo FROM your fork.
+Think of the fork workflow as a triangle: you fork and clone the official repo, create a local copy, push that local copy to your fork, and then create a PR to pull in your updates TO the official repo FROM your fork.
+:::
+
+![](./triangle.png)
 
 ### Step 1. Setting up your local repo
 1. Fork the upstream repo (IF are an employee and have write access, just skip to Step 2 and clone the repo.)
-2. Clone the forked repo (OR if you did not fork, then clone the official upstream repo) in order to create a local working copy, using these commands:
+2. Clone the forked repo in order to create a local working copy, using these commands:
    a. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`.
    b. Initialize git in that directory using `git init`.
    c. Go to the upstream repo, click `< >Code` and then select **Clone** from the drop-down menu.
    d. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
-   e. Then in your terminal (in the directory you just created), run: `git clone <the URL you copied>`
+   e. Then in your terminal (inside the directory you just created), run: `git clone <the URL you copied>`
 
 3. Define upstream and origin repos 
 
-    a. Set your remote repo (the forked one or the official) as origin: `git remote add origin https://github.com/<repo name>`
+    a. Set your remote repo (the forked one if you forked or or the official one of you only cloned) as origin: `git remote add origin https://github.com/<repo name>`.
     
-    b. Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://github.com/user/repo.git`
+    b. Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://github.com/user/repo.git`.
 
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
 ### Step 2. Use one of the following processes, depending on if you **forked** the upstream repo or directly **cloned** it (usually the case if you are an employee and have write access).
 
-#### Daily workflow on a **forked repo**
+#### Daily workflow with a **forked repo**
 
 | Command      | Explanation |
 | ----------- | ----------- |
 | `git status`      | A quick check of current status of your local repo       |
-| `git branch`   | Determine which branch you are in, locally.         |
-| `git switch main` |  move to the local main branch before   |
+| `git branch`   | Determine which branch you are in, locally     |
+| `git switch main` |  move to the local main branch before  synching |
 | `git pull origin main` | synch with the upstream repo every day BEFORE you begin your work. This command synchs your repo with the upstream repo, so it will pick up any new changes by colleagues. A “git pull” is faster, but if you want to download only the meta-data about the changes, you can do git fetch, and then when ready to merge those changes,do a git merge. A “git pull” does a git fetch followed by a git merge |
 | IF YOU ARE returning to a PR to work more on it after others have reviewed, requested edits, etc | Switch to your local branch, and run `git pull --rebase origin main`. This will apply any changes that have been made (to the upstream repo) on top of origin/main in your local branch. |
 | Decide which branch to work in: To create a new branch use `git checkout -b <name of new branch>`. To switch to existing branch use `git switch <name of branch>` OR `git checkout <name of branch>` | Typically you should name the working branch after the work ticket number or the task, to identify this particular chunk of work.|
@@ -73,12 +76,16 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
 ### Step 3. Open a Pull Request
+These steps assume that you ahve already pushed chnages to the upstream repo, so that when you go there, you see the request for the changes.
 
-1. Go to the GitHub repository for the upstream repo.
-2. Go to the Pull Request tab.
+1. Go to the GitHub repository for the upstream repo (the official repo to which you want to contribute).
+2. Go to the **Pull Request** tab. (There you should see a message about your recent push to the repo.)
 3. Click the **Compare & pull request**.
-4. On the PR page, provide a commit message (or keep the one you added when committing). Also select at least two reviewers.
-5. Click  **Create pull request**.
+4. On the PR page:
+     a. provide a commit message (or keep the one you added when committing).
+     b. change the commit title to match the directory destination for your changes. (Ex. `website/docs: commit message`.)
+     b. select at least two reviewers.
+6. Click  **Create pull request**.
 
 ## Cheatsheets
 	
