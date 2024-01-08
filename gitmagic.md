@@ -20,9 +20,8 @@
 
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream (official) repository.
 
-:::info
+NOTE: 
 Think of the fork workflow as a triangle: you fork and clone the official repo, create a local copy, push that local copy to your fork, and then create a PR to pull in your updates TO the official repo FROM your fork.
-:::
 
 ![](./triangle.png)
 
