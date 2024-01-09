@@ -28,13 +28,14 @@ Think of the fork workflow as a triangle: you fork and clone the official repo, 
 ### Step 1. Setting up your local repo
 1. Fork the upstream repo (IF are an employee and have write access, just skip to Step 2 and clone the repo.)
 2. Clone the forked repo in order to create a local working copy, using these commands:
+
    a. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`.
    b. Initialize git in that directory using `git init`.
    c. Go to the upstream repo (your forked repo), click `< >Code` and then select **Clone** from the drop-down menu.
    d. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
    e. Then in your terminal (inside the directory you just created), run: `git clone <the URL you copied>`
 
-3. Define origin and upstream repos 
+4. Define origin and upstream repos 
 
     a. Define origin: Set your remote repo (the forked one if you forked or or the official one if you only cloned) as origin: `git remote add origin https://github.com/<repo name>`.
     
