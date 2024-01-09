@@ -30,9 +30,13 @@ Think of the fork workflow as a triangle: you fork and clone the official repo, 
 2. Clone the forked repo in order to create a local working copy, using these commands:
 
    a. In your terminal, create a new directory for the local repo using `mkdir <name-of-dir>`.
+   
    b. Initialize git in that directory using `git init`.
+   
    c. Go to the upstream repo (your forked repo), click `< >Code` and then select **Clone** from the drop-down menu.
+   
    d. Select HTTPs, and copy the URL for the repo, using the "copy" icon.
+   
    e. Then in your terminal (inside the directory you just created), run: `git clone <the URL you copied>`
 
 4. Define origin and upstream repos 
