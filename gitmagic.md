@@ -142,6 +142,9 @@ Then run `git rm -r <dir-you-want-to-delete>` and `git commit --amend` and final
 * To remove directories, run `git clean -f -d` or git clean -fd. 
 * To remove ignored files, run git clean -f -X or git clean -fX.
 * To remove ignored and non-ignored files, run git clean -f -x or git clean -fx.
+
+NOTES:
+*   These commands only work if you `cd` into the actual dir where the untracked file is! However, you can run this one from the root: `git clean -f :/` (works as if you had run it in the root repo dir). 
    
 ### Personal tokens
 	
