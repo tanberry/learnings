@@ -208,6 +208,14 @@ NOTE: recently, the final step above did not work for me, but rather created a b
    
   For more info about using `rebase` see [How to Rebase a Pull Request](https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request).
 	
+## Alt text for images in blogs
+
+`![Image1](./image1.jpg "Image by Joe")`
+
+**Ken’s Better Way** (which still provides hover text, but also links the whole image.. so if a reader clicks on image, they go to the photographer’s website):
+
+`[![Image1](./image1.jpg)](https://pixabay.com/users/jplenio-7645255/  "Image by jplenio on pixabay")`
+
 ## Using aliases
 	
 (Thanks to Ken @ authentik for this!)
