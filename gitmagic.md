@@ -167,6 +167,25 @@ On macOS systems, you often get extraneous files called .DS_Store. To unstage/un
  
 Be aware that this will also unstage any pending files that were committed...  it will reset your local branch to be just like upstream branch. You should also add the file name to your gitignore file.
 
+## File counts 
+(This is form a fantastic website https://www.linuxjournal.com/content/how-count-files-directory-linux)
+
+Using the ‘ls’ Command and Piping with ‘wc’
+The ‘ls’ Command
+The ls command in Linux is used to list files and directories. You can use it with the wc command to count files.
+
+Counting Files with ‘ls’ and ‘wc’
+You can count files in a directory by using the following command:
+
+ls -1 | wc -l
+
+Here, ls -1 lists the files in a single column, and wc -l counts the lines, effectively giving you the number of files.
+
+Examples
+In your home directory, you can run:
+
+cd ~ ls -1 | wc -l
+
 ## Random notes of knowledge from Chris Nixon
 * git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
  
