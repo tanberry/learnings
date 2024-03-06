@@ -91,6 +91,17 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
    c. select at least two reviewers.
 6. Click  **Create pull request**.
 
+## To fetch a remote PR into your local repo
+
+`git fetch origin pull/$ID/head:$BRANCHNAME`
+where `$ID` is the pull request id and `$BRANCHNAME` is the name of the new branch that you want to create. Once you have created the branch, then simply run:
+
+`git checkout $BRANCHNAME`
+For instance, let's imagine you want to checkout pull request #2 from the origin main branch:
+
+`git fetch origin pull/2/head:MASTER`
+See the official GitHub documentation for more.
+
 ## Cheatsheets
 	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
