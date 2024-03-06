@@ -100,7 +100,8 @@ where `$ID` is the pull request id and `$BRANCHNAME` is the name of the new bran
 For instance, let's imagine you want to checkout pull request #2 from the origin main branch:
 
 `git fetch origin pull/2/head:MASTER`
-See the official GitHub documentation for more.
+
+After fetching the remote PR into your local repo, it willappear in the list of brnaches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
 
 ## Cheatsheets
 	
