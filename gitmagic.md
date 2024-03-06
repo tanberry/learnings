@@ -103,6 +103,14 @@ For instance, let's imagine you want to checkout pull request #2 from the origin
 
 After fetching the remote PR into your local repo, it willappear in the list of brnaches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
 
+### Push to Existing PR
+To push changes/commits back to someone else’s PR in an upstream project.
+
+git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]
+Example:
+git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change
+
+
 ## Cheatsheets
 	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
