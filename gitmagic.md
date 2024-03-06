@@ -104,6 +104,7 @@ For instance, let's imagine you want to checkout pull request #2 from the origin
 After fetching the remote PR into your local repo, it willappear in the list of brnaches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
 
 ### Push to Existing PR
+(From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5) on Medium.)
 To push changes/commits back to someone else’s PR in an upstream project.
 
 git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]
@@ -138,7 +139,6 @@ On your local working branch, run `git status` to make sure all of your local ch
 Now run `git fetch origin main`.
 
 Finally run `git merge main`.
-
 	
 ### Rebasing a remote branch/PR
 	
