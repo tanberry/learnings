@@ -45,6 +45,8 @@ Think of the fork workflow as a triangle: you fork and clone the official repo, 
     
     b. Define upstream: Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://https://github.com/<repo name>.git`.
 
+    c. To verify that your remote and upstream were set, run `git remote -v`.
+
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
 ### Step 2. Use one of the following processes, depending on if you **forked** the upstream repo or directly **cloned** it (usually the case if you are an employee and have write access).
