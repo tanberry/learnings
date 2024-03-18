@@ -43,7 +43,7 @@ Think of the fork workflow as a triangle: you fork and clone the official repo, 
 
     a. Define origin: Set your remote repo (the forked one if you forked or or the official one if you only cloned) as origin: `git remote add origin https://github.com/<repo name>`.
     
-    b. Define upstream: Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://github.com/https://github.com/<repo name>.git`.
+    b. Define upstream: Set the upstream repo to point to the repo that you forked (or cloned): `git remote add upstream git://https://github.com/<repo name>.git`.
 
 Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/GitHub_Fork_Clone_Origin_Upstream.php) to learn more about origin vs upstream.
 
