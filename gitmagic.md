@@ -168,6 +168,9 @@ Then run `git rm -r <dir-you-want-to-delete>` and `git commit --amend` and final
 NOTES:
 *   These commands only work if you `cd` into the actual dir where the untracked file is! However, you can run this one from the root: `git clean -f :/` (works as if you had run it in the root repo dir). 
    
+### Port numbers
+To see what is running, and on what ports, use the command `sudo /usr/sbin/lsof -i -n -P | grep TCP | grep LISTEN`.
+
 ### Personal tokens
 	
 Issue: if prompted for your password, you will need to use a "personal token" (post August 2021). For more info, refer to this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
