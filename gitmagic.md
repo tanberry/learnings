@@ -1,5 +1,7 @@
 # Git Magic
 
+A long [YouTube video](https://www.youtube.com/watch?v=aolI_Rz0ZqY) by a co-founder of GitHUb made can teach you everythuung you think you want to know about Git, but don;t really.
+
 ## Contents
 
 [Contributing](#contributing)
