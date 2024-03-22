@@ -131,6 +131,9 @@ Use `;` to run commands one after another, `&&` to only run the next command if 
 `git branch -d <local-branch>`
 	
 ## Troubleshooting
+
+### Solve a stuck push
+If you go to create PR and the push just hangs, this is agreat article to read: https://dev.to/dev_neil_a/how-to-clear-a-stuck-github-push-h57
 	
 ### Synching your local `/main` to be exactly the same as upstream `/main` 
 To get rid of unwanted changes and staged commits, run `git reset --hard origin/main`. To further cleanup, as in remove _DS_Store files, run `git clean -d -f`.
