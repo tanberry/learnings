@@ -138,6 +138,8 @@ Amazing article: https://rewind.com/blog/recovering-deleted-files-in-github/
 
 ### Solve a stuck push
 If you go to create PR and the push just hangs, this is agreat article to read: https://dev.to/dev_neil_a/how-to-clear-a-stuck-github-push-h57
+
+Also!!! Be sure to check that you are actually loggedin to GitHub, haha. If you are not logged in, and you made a push to oriin to create a PR, the PR will not show up in GitHub!
 	
 ### Synching your local `/main` to be exactly the same as upstream `/main` 
 To get rid of unwanted changes and staged commits, run `git reset --hard origin/main`. To further cleanup, as in remove _DS_Store files, run `git clean -d -f`.
