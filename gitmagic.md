@@ -101,11 +101,12 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
 where `$ID` is the pull request id and `$BRANCHNAME` is the name of the new branch that you want to create. Once you have created the branch, then simply run:
 
 `git checkout $BRANCHNAME`
+
 For instance, let's imagine you want to checkout pull request #2 from the origin main branch:
 
-`git fetch origin pull/2/head:MASTER`
+`git fetch origin pull/2/head:MAIN`
 
-After fetching the remote PR into your local repo, it willappear in the list of brnaches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
+After fetching the remote PR into your local repo, it will appear in the list of branches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
 
 ### Push to Existing PR
 (From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7) on Medium.)
