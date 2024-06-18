@@ -112,9 +112,9 @@ After fetching the remote PR into your local repo, it will appear in the list of
 (From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7) on Medium.)
 To push changes/commits back to someone else’s PR in an upstream project.
 
-git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]
+`git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]`
 Example:
-git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change
+`git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change`
 
 
 ## Cheatsheets
