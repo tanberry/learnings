@@ -127,6 +127,11 @@ From Jens: If you want to pull down a commit that was made in your PR upstream, 
 
 Use `;` to run commands one after another, `&&` to only run the next command if the first one is successful, and use `||` to only run the next command if the first one fails.
 
+### Count tracked files
+To count all `.md` files run:
+
+`git ls-files | grep "\.md$" | wc -l`
+
 ### Delete local branches
 
 `git branch -d <local-branch>`
