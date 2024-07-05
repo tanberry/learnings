@@ -95,20 +95,24 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
    c. select at least two reviewers.
 6. Click  **Create pull request**.
 
-## To fetch a remote PR into your local repo
+## Working with a contributor's PR
+
+### Step 1. Fetch the remote PR into your local repo
 
 `git fetch origin pull/$ID/head:$BRANCHNAME`
-where `$ID` is the pull request id and `$BRANCHNAME` is the name of the remote/upstream branch (bt default, ofen `patch-1`. Once you have created the branch, then simply run:
-
-`git checkout $BRANCHNAME`
-
+where `$ID` is the pull request id and `$BRANCHNAME` is the name of the remote/upstream branch (bt default, ofen `patch-1`. 
 For instance, let's imagine you want to checkout pull request #236 from the origin main branch:
 
 `git fetch origin pull/236/head:patch-1`
 
 After fetching the remote PR into your local repo, it will appear in the list of branches when you run `git branch`. Be sure to navigate to that branch before you begin your work.
 
-### Push to Existing PR
+Once you have created the branch, then simply run:
+
+`git checkout $BRANCHNAME`
+
+
+### Step 2. Push to Existing PR
 (From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7) on Medium.)
 To push changes/commits back to someone else’s PR in an upstream project.
 
