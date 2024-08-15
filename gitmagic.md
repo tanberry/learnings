@@ -161,9 +161,9 @@ If you created a local working branch, say `enterprise-docs` and you are working
 
 On your local working branch, run `git status` to make sure all of your local changes have been staged. If needed, run `git add` and `git commit` to stage the changes.
 
-Now run `git fetch origin main`.
+Now run `git fetch origin main` and then run `git merge main`.
 
-Finally run `git merge main`.
+Finally run `git push origin <branch name>` to complete the sync.
 	
 ### Rebasing a remote branch/PR
 	
