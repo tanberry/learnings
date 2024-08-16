@@ -138,6 +138,10 @@ To count all `.md` files run:
 
 `git ls-files | grep "\.md$" | wc -l`
 
+For images run these two:
+git ls-files | grep "\.png" | wc -l
+git ls-files | grep "\.jpg" | wc -l
+
 ### Delete local branches
 
 `git branch -d <local-branch>`
