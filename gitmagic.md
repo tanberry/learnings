@@ -184,10 +184,14 @@ From twitter, the suggestion to use `git restore —staged`. Removes the file fr
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
 	
-Run `rm -r <dir-you-want-to-delete>` in the root source folder
-Run `git rm -r <dir-you-want-to-delete>` 
-Run `git commit --amend` 
-Finally, run `git push --force --set-upstream origin <name-of-PR-branch-on-remote>`
+Run `rm -r <dir-you-want-to-delete>` in the root source folder.
+
+Run `git rm -r <dir-you-want-to-delete>`.
+
+Run `git commit --amend`.
+
+Finally, run `git push --force --set-upstream origin <name-of-PR-branch-on-remote>`.
+
 
 ### How to remove local untracked files from the current Git branch
 * To remove directories, run `git clean -f -d` or git clean -fd. 
