@@ -122,7 +122,7 @@ To push changes/commits back to someone else’s PR in an upstream project.
 Example:
 `git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change`
 
-Hmmmm... last time I did this I just did a normal `git push origin >name of upstream branch>` and it worked.
+Hmmmm... last time I did this I just did a normal `git push origin <name of upstream branch>` and it worked.
 
 ## Cheatsheets
 	
