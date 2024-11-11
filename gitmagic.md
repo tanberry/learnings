@@ -96,6 +96,9 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
 6. Click  **Create pull request**.
 
 ## Working with a contributor's PR
+Resources: 
+*	https://stackoverflow.com/questions/27567846/how-can-i-check-out-a-github-pull-request-with-git
+*	https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7
 
 ### Step 1. Fetch the remote PR into your local repo
 
@@ -115,7 +118,7 @@ After fetching the remote PR into your local repo, it will appear in the list of
 Be sure to navigate to that branch before you begin your work, using `git checkout $BRANCHNAME`.
 
 ### Step 2. Push to Existing PR
-(From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7) on Medium.)
+
 To push changes/commits back to someone else’s PR in an upstream project.
 
 `git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]`
