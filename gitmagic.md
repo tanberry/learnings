@@ -102,9 +102,9 @@ Resources:
 
 ### Step 1. Fetch the remote PR into your local repo
 
-In your local `main` branch, run 'gir pull origin main` in order to make sure that your main is up-to-date.
+In your local `main` branch, run `git pull origin main` in order to make sure that your main is up-to-date.
 
-Then to pull in and create alocal branch of the contributor's remote branch, run:
+Then to pull in and create a local branch of the contributor's remote branch, run:
 
 `git fetch origin pull/$ID/head:$BRANCHNAME`
 where `$ID` is the pull request id and `$BRANCHNAME` is the name of the remote/upstream branch (by default, often `patch-1`. 
