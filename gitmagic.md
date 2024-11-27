@@ -102,6 +102,8 @@ Resources:
 *	https://stackoverflow.com/questions/27567846/how-can-i-check-out-a-github-pull-request-with-git
 *	https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7
 
+NOTE: Usually the steps below work for me. One day they did not, but this did: `git fetch origin pull/ID/head && git checkout FETCH_HEAD`. For article about this, see https://dev.to/bolajiayodeji/how-to-test-a-pull-request-locally-before-merging-1h29.
+
 ### Step 1. Fetch the remote PR into your local repo
 
 In your local `main` branch, run `git pull origin main` in order to make sure that your main is up-to-date.
