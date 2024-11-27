@@ -6,6 +6,8 @@ A long [YouTube video](https://www.youtube.com/watch?v=aolI_Rz0ZqY) by a co-foun
 
 [Contributing](#contributing)
 
+[Working with a contributor's PR](#Working-with-a-contributors-PR)
+
 [Cheatsheets](#cheatsheets)
 
 [Troubleshooting](#troubleshooting)
