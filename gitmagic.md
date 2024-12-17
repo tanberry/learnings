@@ -111,7 +111,7 @@ Then to pull in and create a local branch of the contributor's remote branch, ru
 
 After fetching the remote PR into your local repo, it will appear in the list of branches when you run `git branch`. 
 
-Be sure to navigate to that branch before you begin your work, using `git checkout $BRANCHNAME`.
+Be sure to navigate to that branch before you begin your work, using `git switch $BRANCHNAME`.
 
 ### Step 2. Push to Existing PR
 
