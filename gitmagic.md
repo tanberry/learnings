@@ -98,11 +98,8 @@ These steps assume that you ahve already pushed chnages to the upstream repo, so
 6. Click  **Create pull request**.
 
 ## Working with a contributor's PR
-Resources: 
-*	https://stackoverflow.com/questions/27567846/how-can-i-check-out-a-github-pull-request-with-git
-*	https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7
 
-NOTE: Usually the steps below work for me. One day they did not, but this did: `git fetch origin pull/ID/head && git checkout FETCH_HEAD`. For article about this, see https://dev.to/bolajiayodeji/how-to-test-a-pull-request-locally-before-merging-1h29.
+It's easier to use `gh` (GitHub's CLI) to work with contributor's PRs. You can install gh using brew.
 
 ### Step 1. Fetch the remote PR into your local repo
 
@@ -110,12 +107,7 @@ In your local `main` branch, run `git pull origin main` in order to make sure th
 
 Then to pull in and create a local branch of the contributor's remote branch, run:
 
-`git fetch origin pull/$ID/head:$BRANCHNAME`
-where `$ID` is the pull request id and `$BRANCHNAME` is the name of the remote/upstream branch (by default, often `patch-1`. 
-
-For instance, let's imagine you want to checkout pull request #236 from the origin main branch:
-
-`git fetch origin pull/236/head:patch-1`
+`gh pr checkout 12161`
 
 After fetching the remote PR into your local repo, it will appear in the list of branches when you run `git branch`. 
 
@@ -123,13 +115,11 @@ Be sure to navigate to that branch before you begin your work, using `git checko
 
 ### Step 2. Push to Existing PR
 
-To push changes/commits back to someone else’s PR in an upstream project.
+To push changes/commits back to someone else’s PR in an upstream project, run:
 
-`git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]`
-Example:
-`git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change`
+`git push`
 
-Hmmmm... last time I did this I just did a normal `git push origin <name of upstream branch>` and it worked.
+When you use gh, and checkout the PR, gh sets the upstream/origin for you, so you don't need to specify the branch on the push command.
 
 ## Cheatsheets
 	
@@ -140,6 +130,14 @@ Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-she
 From Jens: If you want to pull down a commit that was made in your PR upstream, and then run `make website` (for the linter), you can run `git pull; make website` and then commit the changes. (Assuming you’ve got the PR branch checked out, you can just run `git pull` and not specify theupstream branch.)
 
 Use `;` to run commands one after another, `&&` to only run the next command if the first one is successful, and use `||` to only run the next command if the first one fails.
+
+### Marc tips
+
+-	He uses `git checkout website/` to discard the changes that were made to a folder on that branch (not creating a new branch). 
+
+-	Two main factors: branches (switch) and dirs (checkout).  
+
+-	You can run `make website-lint-fix` which only runs prettier, instead of `make website` (which runs the whole build process)
 
 ### Count tracked files
 To count all `.md` files run:
