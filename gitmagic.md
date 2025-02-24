@@ -181,7 +181,8 @@ For when you created a PR, then others make commits to it so that your local bra
 
 However, I used this command (from [here](https://www.freecodecamp.org/news/error-failed-to-push-some-refs-to-how-to-fix-in-git/)) and it worked prefectly:
 
-`git pull --rebase origin [branch]`
+- To rebase on the upstream branch (someone made changes to that branch):`git pull --rebase origin [branch]`
+- To rebase on the upstream main (changes have been pushed to main that you need):`git pull --rebase origin main`
 
 **Winner winner chicken dinner! -->** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
 
