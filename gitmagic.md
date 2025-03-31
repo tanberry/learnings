@@ -58,7 +58,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 
 ### Step 2. Use one of the following processes, depending on if you **forked** the upstream repo or directly **cloned** it (usually the case if you are an employee and have write access).
 
-#### Daily workflow with a **forked repo**
+#### Daily workflow with a *forked repo*
 
 | Command      | Explanation |
 | ----------- | ----------- |
@@ -73,7 +73,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | Do your coding, editing, writing work on the files using vim, Atom, VSCode, or your fav editor. | Keep your chunks of work relatively small and separate from other work. Ideally, each branch that gets pushed is a single discrete chunk of work. This keeps you agile and able to more quickly commit completed work, or roll back sections. |
 | `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
-#### Daily workflow on a **cloned repo**
+#### Daily workflow on a *cloned repo*
 
 | Command      | Explanation |
 | ----------- | ----------- |
