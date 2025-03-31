@@ -24,10 +24,13 @@ A long [YouTube video](https://www.youtube.com/watch?v=aolI_Rz0ZqY) by a co-foun
 
 Below are the steps for setting up your own local working directory, and then committing your changes back to the upstream (official) repository.
 
-NOTE: 
-Think of the fork workflow as a triangle: you fork and clone the official repo, create a local copy, push that local copy to your fork, and then create a PR to pull in your updates TO the official repo FROM your fork.
-
+There are two ways to contribut to an upstream repo:
+1. fork the repo so that you have your own, upstream version of it, then clone your fork so that you have a local, working copy. (Think of the fork workflow as a triangle: you fork the 1) official repo to create a forked upstream version, and then clone that fork to create 3) a local copy. You then make changes locally, then push that local copy to your fork, and then create a PR on your fork repo to pull in your updates TO the official repo FROM your fork.
 ![](./triangle.png)
+
+3. If you have clone permission, you can skip the fork step, and simply clone the upstream repo so that you have your own (cloned) local repo. (With this method, there is not a triangle, but rather a direct back-and-forth between the upstream repo and your local working repo.)
+
+
 
 ### Step 1. Setting up your local repo
 1. Fork the upstream repo (IF are an employee and have write access, just skip to Step 2 and clone the repo.)
