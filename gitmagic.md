@@ -86,7 +86,7 @@ Note: refer to this [great article](https://www.bogotobogo.com/DevOps/SCM/Git/Gi
 | `git add <name_of_file>` then `git commit -m “<your message enclosed in quotation marks>”` then 'git push origin <branch name>` | When finished writing/editing, you need to  add, commit, and push the new file(s). Tips:  -- You can check which remote branch your local branch is tracking by running `git status -sb`. The top line of the returned message is the remote branch that git push defaults to. Or you can be explicit and do `git push origin <branch name>`  -- If there is not already a branch with the same name as your local working branch, this command will simultaneously create the upstream branch and push to it: `<your-branch-name>` |
 
 ### Step 3. Open a Pull Request
-These steps assume that you ahve already pushed chnages to the upstream repo, so that when you go there, you see the request for the changes.
+These steps assume that you ahve already pushed changes to the upstream repo, so that when you go there, you see the request for the changes.
 
 1. Go to the GitHub repository for the upstream repo (the official repo to which you want to contribute).
 2. Go to the **Pull Request** tab. (There you should see a message about your recent push to the repo.)
