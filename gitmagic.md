@@ -154,6 +154,10 @@ git ls-files | grep "\.jpg" | wc -l
 ### Delete local branches
 
 `git branch -d <local-branch>`
+
+### Set your email address for GitHub notifications
+
+`git config --global user.email tana@goauthentik.io`
 	
 ## Troubleshooting
 
