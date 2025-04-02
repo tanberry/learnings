@@ -16,8 +16,6 @@ A long [YouTube video](https://www.youtube.com/watch?v=aolI_Rz0ZqY) by a co-foun
 
 [Cherry Picking](#cherry-picking)
 
-[Contributing to an existing PR branch](#contributing-to-an-existing-branch)
-
 [Using aliases](#using-aliases)
 
 ## Contributing
@@ -191,6 +189,8 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 - To rebase on the upstream branch (someone made changes to that branch):`git pull --rebase origin [branch]`
 - To rebase on the upstream main (changes have been pushed to main that you need):`git pull --rebase origin main`
 
+- For more info about using `rebase` see [How to Rebase a Pull Request](https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request).
+
 **Winner winner chicken dinner! -->** Jens recomended `git fetch --all` (which downloads all the upstream changes) and then `git reset --hard origin/*branch-name*` because it takes the remote changes and applies them.
 
 From twitter, the suggestion to use `git restore —staged`. Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched. ([source](https://www.git-tower.com/learn/git/commands/git-restore#:~:text=%2D%2Dstaged,restore%20their%20last%20committed%20state.))
@@ -276,7 +276,9 @@ cd ~ ls -1 | wc -l
  
 Chris re cherry-picking: “You’d need to checkout 3.2, then checkout -b a new, differently named docs branch, then run “git cherry-pick <name of your original docs branch>”. That would grab the commit with your changes without grabbing all of the changes from main.”
 
-* ADDING TO AN EXISTING PR: If you clone the logdna/logdna-agent-v2 repo and check out another person's branch (i.e. (switch to that branch) you can add changes to their PR. You just commit on top of the branch and push. Since the PR is just a diff of /main and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
+## Old way to add to an existing PR
+
+If you clone the logdna/logdna-agent-v2 repo and check out another person's branch (i.e. (switch to that branch) you can add changes to their PR. You just commit on top of the branch and push. Since the PR is just a diff of /main and v2.2, any changes you make to the branch v2.2 will get added to the existing PR.
  
 If you want to make changes to the content in an open PR, follow these steps:
  
@@ -289,15 +291,6 @@ If you want to make changes to the content in an open PR, follow these steps:
 7. Push your changes: git push origin <branch name>
 
 NOTE: recently, the final step above did not work for me, but rather created a brand new separate PR... instead of pushing my commits to the existing PR. The command that DID work is `git push <remote> <local_branch>:<remote_name>`
-
- ## How to manage upstream commits that are ahead of your local repo
-   
- If you create a PR, and someone pushes commits to it upstream, you won't be able to do a `git pull` to synch. You will need to do a `git rebase` command.
-   
-  `git rebase origin <name of upstream branch>`
-   
-   
-  For more info about using `rebase` see [How to Rebase a Pull Request](https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request).
 	
 ## Alt text for images in blogs
 
@@ -309,7 +302,7 @@ NOTE: recently, the final step above did not work for me, but rather created a b
 
 ## Using aliases
 	
-(Thanks to Ken @ authentik for this!)
+(Thanks to Ken @authentik for this!)
 	
 #In your ~/.gitconfig file:
 	
