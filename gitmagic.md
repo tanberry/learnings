@@ -120,7 +120,18 @@ To push changes/commits back to someone else’s PR in an upstream project, run:
 
 `git push`
 
-When you use gh, and checkout the PR, gh sets the upstream/origin for you, so you don't need to specify the branch on the push command.
+When you use gh, and checkout the PR, gh sets the upstream/origin for you for that fork, so you don't *normally* need to specify the branch on the push command. 
+
+If you need to synch with that PR (whihc is basiclaly the fork), you need to run `git pull <name of fork>` to pick up any changes made there (don;t try to synch with our `main`; that is not where the changes were made. To find name of the remote run `git remote list`.
+
+### Non-GH method
+
+(From an [excellent article](https://medium.com/google-cloud/pull-push-to-someone-elses-upstream-github-pr-6073ae5005e7) on Medium.)
+ To push changes/commits back to someone else’s PR in an upstream project.
+ 
+ git push git@github.com:[THE SOMEONE ELSE USER ID]/[PROJECT NAME].git [PR BRANCH NAME]:[LOCAL BRANCH NAME]
+ Example:
+ git push git@github.com:someoneelse/main_project_name.git pr_change:pr_change
 
 ## Cheatsheets
 	
