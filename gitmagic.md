@@ -200,7 +200,7 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 - To rebase on the upstream branch (someone made changes to that branch):`git pull --rebase origin [branch]`
 - To rebase on the upstream main (changes have been pushed to main that you need):`git pull --rebase origin main`
 
-**Jens sez**:  Instead of rebasing off the upstream `main'... first do a `git pull` on your local `main`, then in the working branch, do `git rebase main` meaning off of your local main (instead of the upstream `main`.
+**Jens sez**:  Instead of rebasing off the upstream `main`... first switch to your local `main` and do a `git pull`, then switch to the working branch, and do `git rebase main` (meaning off of your local main instead of the upstream `main`).
 
 - For more info about using `rebase` see [How to Rebase a Pull Request](https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request).
 
