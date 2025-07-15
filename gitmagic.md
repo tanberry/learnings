@@ -271,6 +271,10 @@ In your home directory, you can run:
 
 cd ~ ls -1 | wc -l
 
+## How to see latest commits dates for a branch
+
+git log -1 --format="%ci" <branch_name>
+
 ## Random notes of knowledge from Chris Nixon
 * git has 3 “locations” on your machine, it has the working directory, ie your actual files on disk, the index which is the store where things that are waiting to be committed go, you “move” things from your working tree to the index using `git add`. The third place is the repository, you move things from the index to the repository using git commit
  
