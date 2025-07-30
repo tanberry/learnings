@@ -136,6 +136,13 @@ If you need to synch with that PR (whihc is basiclaly the fork), you need to run
 ## Cheatsheets
 	
 Here's a good [general overview](https://www.freecodecamp.org/news/git-cheat-sheet-and-best-practices-c6ce5321f52/) of common git commands.
+
+### Git Diff Command Reference
+
+`git diff` - Compare working directory to staging area.
+`git diff --staged (or --cached )` - Compare staging area to last commit.
+`git diff HEAD` - Compare working directory to last commit.
+`git diff <commit>` - Compare working directory to specific commit.
 	
 ### Concatenating Git commands:
 	
