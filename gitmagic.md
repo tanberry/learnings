@@ -197,20 +197,20 @@ On your local working branch, run `git status` to make sure all of your local ch
 Now run `git fetch origin main` and then run `git merge main`. Finally, run `git push origin <branch name>` to complete the sync.
 
 ### Synching a local branch with your local `main`
-(Answer on SE by [SantiG](https://stackoverflow.com/users/6811667/santig)
+(Answer on SE by [SantiG](https://stackoverflow.com/users/6811667/santig))
 
 First switch to main and synch with upstram `main` by running `git pull origin main`.
 
-- To merge changes from `local_branch` TO `main`:
+- To merge changes from `local_branch` TO local `main`:
 	```
-	git checkout master
+	git checkout main
 	git merge local_branch
 	```
 
-- To merge changes from master TO local_branch
+- To merge changes from local `main` TO `local_branch`:
 	```
 	git checkout local_branch
-	git merge master
+	git merge main
 	```
 `Pull` is when you have an 'origin' repo :)
 	
