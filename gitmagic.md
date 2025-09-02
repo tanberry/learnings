@@ -194,9 +194,24 @@ If you created a local working branch, say `enterprise-docs` and you are working
 
 On your local working branch, run `git status` to make sure all of your local changes have been staged. If needed, run `git add` and `git commit` to stage the changes.
 
-Now run `git fetch origin main` and then run `git merge main`.
+Now run `git fetch origin main` and then run `git merge main`. Finally, run `git push origin <branch name>` to complete the sync.
 
-Finally run `git push origin <branch name>` to complete the sync.
+### Synching a local branch with your local `main`
+
+First switch to main and synch with upstram `main` by running `git pull origin main`.
+
+- To merge changes from `local_branch` TO `main`:
+	```
+	git checkout master
+	git merge local_branch
+	```
+
+- To merge changes from master TO local_branch
+	```
+	git checkout local_branch
+	git merge master
+	```
+`Pull` is when you have an 'origin' repo :)
 	
 ### Rebasing a remote branch/PR
 	
