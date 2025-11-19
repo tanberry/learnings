@@ -342,19 +342,27 @@ NOTE: recently, the final step above did not work for me, but rather created a b
 
 ## Using aliases
 	
-(Thanks to Ken @authentik for this!)
-	
-#In your ~/.gitconfig file:
+1. Open your terminals config file `~/.zshrc` file by running this command:
+
+`vi ~/.zshrc`
+
+2. Edit the ``~/.zshrc` file and add a section for the aliases, and add any aliases you want to use:
 	
 ```	
-[alias]
+cd Documents/repo-local
+PROMPT="%~> "
+
+alias gs='git status'
+alias gb='git branch'
+alias gpo='git push origin'
+alias gpull='git pull origin main'
 	
-unstage = git reset -q HEAD --
-	
-nevermind = !git reset --hard HEAD && git clean -d -f
-	
-wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads	
+#from ken
+alias unstage= `git reset -q HEAD --`
+alias nevermind= `!git reset --hard HEAD && git clean -d -f`
+alias wip= `for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads`	
 ```
+Alternatively you can edit your `~/.gitconfig` file, but the above is how Jens showed me so...
 	
 And an amazing list of aliases from Marc @authentik: https://gitlab.com/risson/soxincfg/-/blob/main/modules/programs/git.nix#L21
    
