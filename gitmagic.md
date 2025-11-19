@@ -342,7 +342,7 @@ NOTE: recently, the final step above did not work for me, but rather created a b
 
 ## Using aliases
 	
-1. Open your terminals config file `~/.zshrc` file by running this command:
+1. Open your terminal's bash file (for Macs it's `~/.zshrc`) by running this command:
 
 `vi ~/.zshrc`
 
