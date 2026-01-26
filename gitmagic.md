@@ -214,6 +214,29 @@ First switch to main and synch with upstram `main` by running `git pull origin m
 	```
 `Pull` is when you have an 'origin' repo :)
 	
+## Configure your .gitconfig file to always rebase on a pull, and always set remote on pusjh
+
+Edit your ~/.gitconfig file (`vi ~/.gitconfig`) (see the `[pull]` and `[push]` settings below):
+
+[user]
+        name = Tana M Berry
+        email = tana@goauthentik.io
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[core]
+        filemode = false
+[push]
+        autoSetupRemote = true
+[alias]
+        gpo = push origin
+        gs = status
+[pull]
+        rebase = true
+
+
 ### Rebasing a remote branch/PR
 	
 For when you created a PR, then others make commits to it so that your local branch is no longer in synch with the remote branch of the PR. If a simple `git pull origin <remote-branch-name>` does not work, then Diane suggests this process: https://github.com/openedx/edx-platform/wiki/How-to-Rebase-a-Pull-Request.
