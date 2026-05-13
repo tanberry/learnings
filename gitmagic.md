@@ -181,6 +181,10 @@ git ls-files | grep "\.jpg" | wc -l
 
 Amazing article: https://rewind.com/blog/recovering-deleted-files-in-github/
 
+### Removing a commit from a PR
+To remove a file, for example, you can simply undo the commit that added that file.,This command undoes the last one (the value `1`); if you used `23` it would remove the last 23 commits:
+`git reset HEAD~1`
+
 ### Solve a stuck push
 If you go to create PR and the push just hangs, this is agreat article to read: https://dev.to/dev_neil_a/how-to-clear-a-stuck-github-push-h57
 
