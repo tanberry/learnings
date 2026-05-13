@@ -181,10 +181,6 @@ git ls-files | grep "\.jpg" | wc -l
 
 Amazing article: https://rewind.com/blog/recovering-deleted-files-in-github/
 
-### Removing a commit from a PR
-To remove a file, for example, you can simply undo the commit that added that file.,This command undoes the last one (the value `1`); if you used `23` it would remove the last 23 commits:
-`git reset HEAD~1`
-
 ### Solve a stuck push
 If you go to create PR and the push just hangs, this is agreat article to read: https://dev.to/dev_neil_a/how-to-clear-a-stuck-github-push-h57
 
@@ -258,6 +254,10 @@ However, I used this command (from [here](https://www.freecodecamp.org/news/erro
 
 From twitter, the suggestion to use `git restore —staged`. Removes the file from the Staging Area, but leaves its actual modifications untouched. By default, the git restore command will discard any local, uncommitted changes in the corresponding files and thereby restore their last committed state. With the --staged option, however, the file will only be removed from the Staging Area - but its actual modifications will remain untouched. ([source](https://www.git-tower.com/learn/git/commands/git-restore#:~:text=%2D%2Dstaged,restore%20their%20last%20committed%20state.))
 	
+### Removing a commit from a PR
+To remove a file, for example, you can simply undo the commit that added that file.,This command undoes the last one (the value `1`); if you used `23` it would remove the last 23 commits:
+`git reset HEAD~1`
+
 ### Removing files from a PR
 If you accidentally included files (like random `.py` files, etc) that you do not want to include in the PR, use the following commands to remove them, delete them from commit, amend the commit message, and then force push to upstream branch.
 	
